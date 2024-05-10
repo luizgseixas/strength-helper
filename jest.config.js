@@ -11,6 +11,5 @@ module.exports = {
   },
   testMatch: ['**/*.(spec|test).ts'],
   bail: false,
-  coverageReporters: ['text-summary', 'lcov', 'json-summary'],
 };
 // setupFilesAfterEnv: ['<rootDir>/jest.setup.js'],
