@@ -5,3 +5,4 @@ db.insert(users).values({ name: 'John Due', email: 'john.mail@mail.com', documen
   console.log({ res })
   db.query.users.findMany().then((result ) => console.log({ result }))
 });
+

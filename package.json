@@ -6,6 +6,9 @@
   "scripts": {
     "build": "tsup src",
     "dev": "tsx src/server.ts",
+    "test": "jest .",
+    "test:watch": "yarn test --watch --no-cache",
+    "test:cov": "yarn test --coverage --no-cache",
     "migrate:generate": "drizzle-kit generate",
     "migrate:run": "drizzle-kit migrate",
     "migrate:drop": "drizzle-kit drop",
@@ -19,6 +22,7 @@
     "@eslint/js": "^9.2.0",
     "@swc/core": "^1.5.3",
     "@swc/jest": "^0.2.36",
+    "@types/bcrypt": "^5.0.2",
     "@types/better-sqlite3": "^7.6.10",
     "@types/jest": "^29.5.12",
     "@types/node": "^20.12.10",
@@ -33,6 +37,7 @@
     "typescript-eslint": "^7.8.0"
   },
   "dependencies": {
+    "bcrypt": "^5.1.1",
     "better-sqlite3": "^9.6.0",
     "drizzle-orm": "^0.30.10"
   }
