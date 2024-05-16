@@ -40,12 +40,13 @@
     "ts-jest": "^29.1.2",
     "tsup": "^8.0.2",
     "tsx": "^4.9.3",
-    "typescript": "^5.4.5",
+    "typescript": "*",
     "typescript-eslint": "^7.9.0"
   },
   "dependencies": {
     "bcrypt": "^5.1.1",
     "better-sqlite3": "^9.6.0",
-    "drizzle-orm": "^0.30.10"
+    "drizzle-orm": "^0.30.10",
+    "zod": "^3.23.8"
   }
 }
