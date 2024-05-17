@@ -1,4 +1,4 @@
-export function isValidCpf(cpf: string): boolean {
+export function isValidCpf (cpf: string): boolean {
   // Remover caracteres não numéricos
   cpf = cpf.replace(/\D/g, '');
 
@@ -18,7 +18,7 @@ export function isValidCpf(cpf: string): boolean {
     soma += parseInt(cpf.charAt(i)) * (10 - i);
   }
   let resto = soma % 11;
-  let digitoVerificador1 = resto < 2 ? 0 : 11 - resto;
+  const digitoVerificador1 = resto < 2 ? 0 : 11 - resto;
 
   // Verificar se o primeiro dígito verificador está correto
   if (parseInt(cpf.charAt(9)) !== digitoVerificador1) {
@@ -31,7 +31,7 @@ export function isValidCpf(cpf: string): boolean {
     soma += parseInt(cpf.charAt(i)) * (11 - i);
   }
   resto = soma % 11;
-  let digitoVerificador2 = resto < 2 ? 0 : 11 - resto;
+  const digitoVerificador2 = resto < 2 ? 0 : 11 - resto;
 
   // Verificar se o segundo dígito verificador está correto
   if (parseInt(cpf.charAt(10)) !== digitoVerificador2) {

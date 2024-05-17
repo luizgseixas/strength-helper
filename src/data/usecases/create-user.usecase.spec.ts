@@ -11,7 +11,7 @@ describe('CreateUserUseCase', () => {
 
   const createUserParams: CreateUserParams = {
     name: 'any_name',
-    document: 'any_document',
+    document: '606.498.848-76',
     email: 'any_email',
     phone: 'any_phone',
     password: 'any_password'
@@ -44,12 +44,18 @@ describe('CreateUserUseCase', () => {
     expect(hasher.hash).toHaveBeenCalledWith('any_password');
   });
 
+  it('should throw Error if document is invalid', async () => {
+    const promise = sut.execute({ ...createUserParams, document: 'any_document' });
+
+    expect(promise).rejects.toThrow(new Error('Documento deve ser um cpf válido'));
+  });
+
   it('should call SaveUserRepository with correct params', async () => {
     await sut.execute(createUserParams);
 
     expect(saveUserRepository.save).toHaveBeenCalledWith({
       name: 'any_name',
-      document: 'any_document',
+      document: '606.498.848-76',
       email: 'any_email',
       phone: 'any_phone',
       password: 'any_hashed_password'

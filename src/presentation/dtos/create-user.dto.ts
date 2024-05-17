@@ -7,7 +7,7 @@ const createUserSchema = z.object({
   email: z.string().email(),
   document: z.string(),
   phone: z.string().optional(),
-  password: z.string().regex(passwordFormatRegex),
-})
+  password: z.string().regex(passwordFormatRegex)
+});
 
-createUserSchema.parse({})
+createUserSchema.parse({});
