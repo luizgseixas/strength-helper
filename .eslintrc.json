@@ -16,6 +16,8 @@
     ],
     "rules": {
       "@typescript-eslint/semi": "off",
-      "semi": ["error", "always"]
-    }
+      "semi": ["error", "always"],
+      "no-useless-constructor": "off",
+      "no-undef": "off"
+  }
 }
