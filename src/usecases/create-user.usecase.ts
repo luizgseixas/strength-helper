@@ -1,8 +1,8 @@
 import { User } from '../../domain/models';
 import { CreateUserParams, ICreateUser } from '../../domain/usecases/create-user';
 import { ISaveUserRepository } from '../protocols/db/save-user-repository';
-import { IHasher } from '../../infra/criptography/bcrypt/bcrypt-adapter';
 import { isValidCpf } from '../../utils/cpf';
+import { IHasher } from '../protocols/cryptography/hash';
 
 export class CreateUserUseCase implements ICreateUser {
   constructor (private readonly hasher: IHasher, private readonly saveUserRepository: ISaveUserRepository) {}

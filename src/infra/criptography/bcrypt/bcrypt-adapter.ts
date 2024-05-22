@@ -1,12 +1,5 @@
+import { IHashComparer, IHasher } from 'src/protocols/cryptography/hash';
 import bcrypt from 'bcrypt';
-
-export interface IHasher {
-  hash: (value: string) => Promise<string>;
-}
-
-export interface IHashComparer {
-  compare: (value: string, hash: string) => Promise<boolean>;
-}
 
 export class BcryptAdapter implements IHasher, IHashComparer {
   constructor (private readonly salt: number) {}
@@ -21,3 +14,8 @@ export class BcryptAdapter implements IHasher, IHashComparer {
     return isValid;
   }
 }
+
+// 🔍
+// 🧪
+// 🐳
+// 📦

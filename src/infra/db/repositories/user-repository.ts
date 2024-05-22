@@ -1,4 +1,4 @@
-import { ISaveUserRepository } from 'src/data/protocols/db/save-user-repository';
+import { ISaveUserRepository } from 'src/protocols/db/save-user-repository';
 import { User } from 'src/domain/models';
 import { DrizzleDbConnection } from '../connection';
 import { users } from '../schema';
