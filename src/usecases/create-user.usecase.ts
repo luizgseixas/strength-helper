@@ -1,7 +1,7 @@
-import { User } from '../../domain/models';
-import { CreateUserParams, ICreateUser } from '../../domain/usecases/create-user';
+import { User } from '../domain/models';
+import { CreateUserParams, ICreateUser } from '../domain/usecases/create-user';
 import { ISaveUserRepository } from '../protocols/db/save-user-repository';
-import { isValidCpf } from '../../utils/cpf';
+import { isValidCpf } from '../utils/cpf';
 import { IHasher } from '../protocols/cryptography/hash';
 
 export class CreateUserUseCase implements ICreateUser {
