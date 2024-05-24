@@ -1,5 +1,5 @@
 import { IListUsersRepository } from '../protocols/db/list-users-repository';
-import { ListUsersUseCase } from './list-users.usecase';
+import { ListUsersUseCase } from './list-users-usecase';
 import { mockUser } from './mocks/user-mock';
 
 describe('ListUsersUseCase', () => {

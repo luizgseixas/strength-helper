@@ -1,7 +1,7 @@
 import { BcryptAdapter } from '../infra/cryptography/bcrypt/cryptography';
 import { db } from '../infra/db/connection';
 import { DrizzleUserRepository } from '../infra/db/repositories/user-repository';
-import { CreateUserUseCase } from '../usecases/create-user.usecase';
+import { CreateUserUseCase } from '../usecases/create-user-usecase';
 
 export const createUserFactory = (): CreateUserUseCase => {
   const hasher = new BcryptAdapter(12);

@@ -1,5 +1,5 @@
 import { FindUserByDocumentOrEmailParams } from '../domain/usecases/find-user-by-document-or-email';
-import { FindUserByDocumentOrEmailUseCase } from './find-user-by-document-or-email';
+import { FindUserByDocumentOrEmailUseCase } from './find-user-by-document-or-email-usecase';
 import { IFindUserByDocumentOrEmailRepository } from '../protocols/db/find-user-by-document-or-email-repository';
 import { ParameterNotProvidedError } from '../http/errors/parameter-not-provided';
 import { mockUser } from './mocks/user-mock';

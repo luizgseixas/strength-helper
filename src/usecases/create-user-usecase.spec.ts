@@ -1,5 +1,5 @@
 import { CreateUserParams } from '../domain/usecases';
-import { CreateUserUseCase } from './create-user.usecase';
+import { CreateUserUseCase } from './create-user-usecase';
 import { ISaveUserRepository } from '../protocols/db/save-user-repository';
 import { IHasher } from '../protocols/cryptography/hash';
 import { mockUser } from './mocks/user-mock';

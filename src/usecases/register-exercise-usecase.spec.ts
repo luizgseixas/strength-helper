@@ -1,6 +1,6 @@
 import { RegisterExerciseParams } from '../domain/usecases/register-exercise';
 import { IRegisterExerciseRepository } from '../protocols/db/register-exercise-repository';
-import { RegisterExerciseUseCase } from './register-exercise.usecase';
+import { RegisterExerciseUseCase } from './register-exercise-usecase';
 import { Exercise } from '../domain/models';
 
 describe('RegisterExerciseUseCase', () => {
