@@ -5,6 +5,6 @@ import { CreateUserUseCase } from '../usecases/create-user.usecase';
 
 export const createUserFactory = () => {
   const hasher = new BcryptAdapter(12);
-  const saveUserRepository = new DrizzleUserRepository(db);
-  return new CreateUserUseCase(hasher, saveUserRepository);
+  const userRepository = new DrizzleUserRepository(db);
+  return new CreateUserUseCase(hasher, userRepository, userRepository);
 };

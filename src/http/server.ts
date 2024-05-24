@@ -1,6 +1,7 @@
 import { ApolloServer, gql } from 'apollo-server';
 import { createUserFactory } from '../factories/create-user';
 import { createUserSchema } from './dtos/create-user.dto';
+import { listUsersFactory } from 'src/factories/list-users';
 
 const typeDefs = gql`
   type User {
@@ -55,6 +56,14 @@ const resolvers = {
         console.error({ error });
       }
     }
+    // listUsers: async (parent: any, args: any, ctx: any) => {
+    //   try {
+    //     const listUsersUseCase = listUsersFactory();
+    //     return listUsersUseCase.execute();
+    //   } catch (error) {
+    //     console.error({ error });
+    //   }
+    // }
   }
 };
 
