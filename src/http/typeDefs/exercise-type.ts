@@ -10,7 +10,7 @@ const exerciseTypeDefs = gql`
     name: String!
     muscle: String!
   }
-  type Query { helloWorld: String! }
+  type Query { listExercises: [Exercise!]! }
   type Mutation {
     registerExercise(params: RegisterExerciseParams): Exercise!
   }
