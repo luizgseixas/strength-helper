@@ -11,8 +11,8 @@ import { eq, or } from 'drizzle-orm';
 export class DrizzleUserRepository implements ISaveUserRepository, IListUsersRepository, IFindUserByDocumentOrEmailRepository {
   constructor (private readonly dbConnection: DrizzleDbConnection) {}
 
-  public async save (user: CreateUserParams): Promise<User> {
-    const returning = await this.dbConnection.insert(users).values(user).returning();
+  public async save (params: CreateUserParams): Promise<User> {
+    const returning = await this.dbConnection.insert(users).values(params).returning();
     return returning[0];
   };
 

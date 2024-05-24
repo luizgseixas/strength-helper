@@ -1,6 +1,6 @@
-import { createUserFactory } from 'src/factories/create-user';
-import { createUserSchema } from '../dtos/create-user.dto';
-import { listUsersFactory } from 'src/factories/list-users';
+import { createUserFactory } from '../../factories/create-user';
+import { createUserSchema } from '../dtos/create-user-dto';
+import { listUsersFactory } from '../../factories/list-users';
 
 const userResolvers = {
   Query: {
@@ -16,7 +16,7 @@ const userResolvers = {
   Mutation: {
     createUser: async (parent: any, args: any, ctx: any) => {
       try {
-        const params = await createUserSchema.parseAsync(args);
+        const params = await createUserSchema.parseAsync(args.params);
         const createUserUseCase = createUserFactory();
         const user = await createUserUseCase.execute(params);
         return user;
