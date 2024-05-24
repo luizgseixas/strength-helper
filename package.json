@@ -44,6 +44,7 @@
     "typescript-eslint": "^7.9.0"
   },
   "dependencies": {
+    "@graphql-tools/merge": "^9.0.4",
     "apollo-server": "^3.13.0",
     "bcrypt": "^5.1.1",
     "better-sqlite3": "^9.6.0",
