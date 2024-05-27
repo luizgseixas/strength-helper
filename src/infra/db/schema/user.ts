@@ -1,6 +1,7 @@
 import { randomUUID } from 'crypto';
-import { sql } from 'drizzle-orm';
+import { relations, sql } from 'drizzle-orm';
 import { sqliteTable, text } from 'drizzle-orm/sqlite-core';
+import { trainings } from './training';
 
 export const users = sqliteTable('tb_user', {
   id: text('id')
@@ -14,3 +15,7 @@ export const users = sqliteTable('tb_user', {
   createdAt: text('created_at').default(sql`(CURRENT_TIMESTAMP)`),
   updatedAt: text('updated_at').default(sql`(CURRENT_TIMESTAMP)`)
 });
+
+export const usersRelations = relations(users, ({ many }) => ({
+  trainings: many(trainings)
+}));
